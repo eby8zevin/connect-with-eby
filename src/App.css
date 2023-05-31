@@ -35,6 +35,11 @@ body {
   font-size: 20px;
 }
 
+.subtitle {
+  font-size: 14px;
+  font-weight: 500;
+}
+
 .card p {
   font-size: 16px;
 }
@@ -131,4 +136,59 @@ body {
 .card.dark .dark-mode {
   transition: 1s ease-in;
   transform: scale(50);
+}
+
+@media (max-width: 600px) {
+  .card {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .card_body {
+    min-width: 250px;
+  }
+
+  .card h1 {
+    font-size: 16px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  .mt-16 {
+    margin-top: 10px;
+  }
+
+  .p_8 {
+    padding: 6px;
+  }
+
+  .profile .avatar {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 400px) {
+  .card h1 {
+    font-size: 14px;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+
+  .mt-16 {
+    margin-top: 8px;
+  }
+
+  .profile .avatar {
+    width: 60px;
+    height: 60px;
+  }
 }
