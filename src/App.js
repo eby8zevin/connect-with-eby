@@ -13,91 +13,108 @@ function App() {
   const config_cursor = {
     show: true,
     blink: true,
-    element: "💘",
+    element: " ✏️",
     hideWhenDone: true,
   };
 
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div>
-      <div className={`card ${darkMode ? "dark" : ""}`}>
+    <div className="d-flex content-center">
+      <div className={`card ${darkMode ? "dark-theme" : ""}`}>
         <div
-          className="toggle-btn"
+          className={`${darkMode ? "toggle light" : "toggle dark"}`}
           onClick={() => setDarkMode(!darkMode)}
         ></div>
-        <div className="dark-mode"></div>
-        <div className="card_body">
-          <div className="profile text-center">
-            <img src="/logo192.png" className="avatar" alt="avatar" />
-            <div className="bg_content rd_12 p_8">
-              <h1>Ahmad Abu Hasan</h1>
-              <Typist cursor={config_cursor}>
-                <span className="subtitle">سنتري | Programmer</span>
-                <br />
-                <span className="subtitle">
-                  Backend & Android Apps Development
-                </span>
-              </Typist>
-            </div>
-
-            <div className="bg_content rd_12 p_8 mt-16">
-              Familiar with{" "}
-              <TextLoop interval={800}>
-                <span className="highlight">Android Studio</span>
-                <span className="highlight">Android SDK</span>
-                <span className="highlight">Android NDK</span>
-                <span className="highlight">PHP</span>
-                <span className="highlight">MySQL</span>
-                <span className="highlight">Git</span>
-                <span className="highlight">Cyber-Security</span>
-              </TextLoop>
-            </div>
+        <div className={`bg-dark ${darkMode ? "active" : ""}`}></div>
+        <div className="card-body">
+          <div>
+            <img
+              src="https://github.com/eby8zevin.png"
+              className="card-avatar"
+              alt="avatar"
+            />
           </div>
 
-          <div className="mt-16">
+          <div className="card-title">
+            Ahmad Abu Hasan
+            <Typist cursor={config_cursor}>
+              <span className="subtitle">سنتري | Programmer</span>
+              <br />
+              <span className="subtitle">
+                Backend & Android Apps Development
+              </span>
+            </Typist>
+          </div>
+
+          <div className="card-title">
+            Familiar with{" "}
+            <TextLoop interval={800}>
+              <span className="text-blue">Android Studio</span>
+              <span className="text-blue">Android SDK</span>
+              <span className="text-blue">Android NDK</span>
+              <span className="text-blue">PHP</span>
+              <span className="text-blue">MySQL</span>
+              <span className="text-blue">Git</span>
+              <span className="text-blue">Cyber-Security</span>
+            </TextLoop>
+          </div>
+
+          <div>
             <a
-              className="btn_action bg_content"
+              target="_blank"
+              rel="noreferrer"
               href="https://linkedin.com/in/ahmadabuhasan"
             >
-              <BsLinkedin />
-              <span>LinkedIn</span>
+              <div className="btn-action">
+                <BsLinkedin />
+                <span>LinkedIn</span>
+                <span></span>
+              </div>
             </a>
-          </div>
-          <div className="mt-16">
+
             <a
-              className="btn_action bg_content"
+              target="_blank"
+              rel="noreferrer"
               href="https://github.com/eby8zevin"
             >
-              <BsGithub />
-              <span>GitHub</span>
+              <div className="btn-action">
+                <BsGithub />
+                <span>GitHub</span>
+              </div>
             </a>
-          </div>
-          <div className="mt-16">
+
             <a
-              className="btn_action bg_content"
+              target="_blank"
+              rel="noreferrer"
               href="https://twitter.com/eby8zevin"
             >
-              <BsTwitter />
-              <span>Twitter</span>
+              <div className="btn-action">
+                <BsTwitter />
+                <span>Twitter</span>
+              </div>
             </a>
-          </div>
-          <div className="mt-16">
+
             <a
-              className="btn_action bg_content"
+              target="_blank"
+              rel="noreferrer"
               href="https://www.instagram.com/eby8zevin"
             >
-              <BsInstagram />
-              <span>Instagram</span>
+              <div className="btn-action">
+                <BsInstagram />
+                <span>Instagram</span>
+              </div>
             </a>
-          </div>
-          <div className="mt-16">
+
             <a
-              className="btn_action bg_content"
+              target="_blank"
+              rel="noreferrer"
               href="https://www.facebook.com/profile.php?id=100001555488554"
             >
-              <BsFacebook />
-              <span>Facebook</span>
+              <div className="btn-action">
+                <BsFacebook />
+                <span>Facebook</span>
+              </div>
             </a>
           </div>
         </div>
