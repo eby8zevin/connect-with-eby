@@ -32,9 +32,12 @@ function App() {
             <img src="/logo192.png" className="avatar" alt="avatar" />
             <div className="bg_content rd_12 p_8">
               <h1>Ahmad Abu Hasan</h1>
-              <p className="mt-16">سنتري | Programmer</p>
               <Typist cursor={config_cursor}>
-                Backend & Android Apps Development
+                <span className="subtitle">سنتري | Programmer</span>
+                <br />
+                <span className="subtitle">
+                  Backend & Android Apps Development
+                </span>
               </Typist>
             </div>
 
@@ -99,7 +102,7 @@ function App() {
           </div>
         </div>
       </div>
-      <ParticlesBg type="thick" bg={true} />
+      <ParticlesBg type="random" bg={true} />
     </div>
   );
 }
