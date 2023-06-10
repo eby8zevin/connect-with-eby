@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import ParticlesBg from "particles-bg";
 import "./App.css";
+import ParticlesBg from "particles-bg";
+import { useState, useRef } from "react";
 import { BsLinkedin } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
+import { AiOutlineDown } from "react-icons/ai";
 import Typist from "react-typist";
 import TextLoop from "react-text-loop";
 
@@ -18,31 +19,50 @@ function App() {
   };
 
   const [darkMode, setDarkMode] = useState(false);
+  const card = useRef(null);
+
+  function toggle() {
+    setDarkMode(!darkMode);
+  }
+
+  function HandleScrollDown() {
+    card.current.scrollTop = card.current.scrollHeight;
+  }
 
   return (
     <div className="d-flex content-center">
       <div className={`card ${darkMode ? "dark-theme" : ""}`}>
         <div
-          className={`${darkMode ? "toggle light" : "toggle dark"}`}
-          onClick={() => setDarkMode(!darkMode)}
+          className={`toggle ${darkMode ? "light" : "dark"}`}
+          onClick={() => toggle()}
         ></div>
         <div className={`bg-dark ${darkMode ? "active" : ""}`}></div>
-        <div className="card-body">
+        <div ref={card} className="card-body custom-scrollbar">
           <div>
             <img
-              src="https://github.com/eby8zevin.png"
               className="card-avatar"
+              src="https://github.com/eby8zevin.png"
               alt="avatar"
             />
           </div>
 
           <div className="card-title">
-            Ahmad Abu Hasan
-            <Typist cursor={config_cursor}>
+            <Typist startDelay={100} cursor={config_cursor}>
+              Ahmad Abu Hasan <br />
+              <Typist.Delay
+                ms={500}
+                hideWhenDone={true}
+                hideWhenDoneDelay={true}
+              />
               <span className="subtitle">سنتري | Programmer</span>
               <br />
+              <Typist.Delay
+                ms={100}
+                hideWhenDone={true}
+                hideWhenDoneDelay={true}
+              />
               <span className="subtitle">
-                Backend & Android Apps Development
+                Backend &amp; Android Apps Development
               </span>
             </Typist>
           </div>
@@ -67,7 +87,7 @@ function App() {
               href="https://linkedin.com/in/ahmadabuhasan"
             >
               <div className="btn-action">
-                <BsLinkedin />
+                <BsLinkedin className="icon" />
                 <span>LinkedIn</span>
                 <span></span>
               </div>
@@ -79,7 +99,7 @@ function App() {
               href="https://github.com/eby8zevin"
             >
               <div className="btn-action">
-                <BsGithub />
+                <BsGithub className="icon" />
                 <span>GitHub</span>
               </div>
             </a>
@@ -90,7 +110,7 @@ function App() {
               href="https://twitter.com/eby8zevin"
             >
               <div className="btn-action">
-                <BsTwitter />
+                <BsTwitter className="icon" />
                 <span>Twitter</span>
               </div>
             </a>
@@ -101,7 +121,7 @@ function App() {
               href="https://www.instagram.com/eby8zevin"
             >
               <div className="btn-action">
-                <BsInstagram />
+                <BsInstagram className="icon" />
                 <span>Instagram</span>
               </div>
             </a>
@@ -112,13 +132,18 @@ function App() {
               href="https://www.facebook.com/profile.php?id=100001555488554"
             >
               <div className="btn-action">
-                <BsFacebook />
+                <BsFacebook className="icon" />
                 <span>Facebook</span>
               </div>
             </a>
           </div>
         </div>
+        <div className="scroll-info" onClick={HandleScrollDown}>
+          <span className="scroll-text">Scroll Down</span>
+          <AiOutlineDown size={12} />
+        </div>
       </div>
+
       <ParticlesBg type="random" bg={true} />
     </div>
   );
