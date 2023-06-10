@@ -1,12 +1,16 @@
 import "./App.css";
 import ParticlesBg from "particles-bg";
 import { useState, useRef } from "react";
-import { BsLinkedin } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
-import { BsTwitter } from "react-icons/bs";
-import { BsInstagram } from "react-icons/bs";
-import { BsFacebook } from "react-icons/bs";
 import { AiOutlineDown } from "react-icons/ai";
+import {
+  FaReact,
+  FaLinkedinIn,
+  FaTwitter,
+  FaInstagram,
+  FaFacebookF,
+  FaTiktok,
+} from "react-icons/fa";
 import Typist from "react-typist";
 import TextLoop from "react-text-loop";
 
@@ -67,6 +71,50 @@ function App() {
             </Typist>
           </div>
 
+          <div className="social-icons">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://linkedin.com/in/ahmadabuhasan"
+            >
+              <div className="btn-social">
+                <FaLinkedinIn />
+              </div>
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://twitter.com/eby8zevin"
+            >
+              <div className="btn-social">
+                <FaTwitter />
+              </div>
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.instagram.com/eby8zevin"
+            >
+              <div className="btn-social">
+                <FaInstagram />
+              </div>
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.facebook.com/profile.php?id=100001555488554"
+            >
+              <div className="btn-social">
+                <FaFacebookF />
+              </div>
+            </a>
+            <a target="_blank" rel="noreferrer" href="https://www.tiktok.com">
+              <div className="btn-social">
+                <FaTiktok />
+              </div>
+            </a>
+          </div>
+
           <div className="card-title">
             Familiar with{" "}
             <TextLoop interval={800}>
@@ -84,18 +132,6 @@ function App() {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://linkedin.com/in/ahmadabuhasan"
-            >
-              <div className="btn-action">
-                <BsLinkedin className="icon" />
-                <span>LinkedIn</span>
-                <span></span>
-              </div>
-            </a>
-
-            <a
-              target="_blank"
-              rel="noreferrer"
               href="https://github.com/eby8zevin"
             >
               <div className="btn-action">
@@ -104,36 +140,38 @@ function App() {
               </div>
             </a>
 
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://twitter.com/eby8zevin"
-            >
+            <a target="_blank" rel="noreferrer" href="https://google.com">
               <div className="btn-action">
-                <BsTwitter className="icon" />
-                <span>Twitter</span>
+                <FaReact className="icon" />
+                <span>Shopee</span>
               </div>
             </a>
 
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.instagram.com/eby8zevin"
-            >
+            <a target="_blank" rel="noreferrer" href="https://google.com">
               <div className="btn-action">
-                <BsInstagram className="icon" />
-                <span>Instagram</span>
+                <FaReact className="icon" />
+                <span>Tokopedia</span>
               </div>
             </a>
 
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.facebook.com/profile.php?id=100001555488554"
-            >
+            <a target="_blank" rel="noreferrer" href="https://google.com">
               <div className="btn-action">
-                <BsFacebook className="icon" />
-                <span>Facebook</span>
+                <FaReact className="icon" />
+                <span>Lazada</span>
+              </div>
+            </a>
+
+            <a target="_blank" rel="noreferrer" href="https://google.com">
+              <div className="btn-action">
+                <FaReact className="icon" />
+                <span>Blibli</span>
+              </div>
+            </a>
+
+            <a target="_blank" rel="noreferrer" href="https://google.com">
+              <div className="btn-action">
+                <FaReact className="icon" />
+                <span>Bukalapak</span>
               </div>
             </a>
           </div>
