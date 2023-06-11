@@ -1,7 +1,13 @@
 import "./App.css";
 import ParticlesBg from "particles-bg";
 import { useState, useRef } from "react";
-import { BsGithub } from "react-icons/bs";
+import {
+  BsGithub,
+  BsGooglePlay,
+  BsQrCodeScan,
+  BsYoutube,
+  BsSpotify,
+} from "react-icons/bs";
 import { AiOutlineDown } from "react-icons/ai";
 import {
   FaReact,
@@ -10,6 +16,7 @@ import {
   FaInstagram,
   FaFacebookF,
   FaTiktok,
+  FaBriefcase,
 } from "react-icons/fa";
 import Typist from "react-typist";
 import TextLoop from "react-text-loop";
@@ -30,7 +37,10 @@ function App() {
   }
 
   function HandleScrollDown() {
-    card.current.scrollTop = card.current.scrollHeight;
+    card.current.scrollTo({
+      top: card.current.scrollHeight,
+      behavior: "smooth",
+    });
   }
 
   return (
@@ -117,18 +127,37 @@ function App() {
 
           <div className="card-title">
             Familiar with{" "}
-            <TextLoop interval={800}>
+            <TextLoop interval={1000}>
               <span className="text-blue">Android Studio</span>
               <span className="text-blue">Android SDK</span>
               <span className="text-blue">Android NDK</span>
+              <span className="text-blue">Java</span>
+              <span className="text-blue">Kotlin</span>
+              <span className="text-blue">Flutter</span>
+              <span className="text-blue">Dart</span>
+              <span className="text-blue">HTML5</span>
+              <span className="text-blue">CSS3</span>
+              <span className="text-blue">JavaScript</span>
               <span className="text-blue">PHP</span>
               <span className="text-blue">MySQL</span>
+              <span className="text-blue">Node.js</span>
+              <span className="text-blue">React.js</span>
+              <span className="text-blue">Web Server</span>
+              <span className="text-blue">RESTful API</span>
+              <span className="text-blue">CI / CD</span>
               <span className="text-blue">Git</span>
               <span className="text-blue">Cyber-Security</span>
             </TextLoop>
           </div>
 
           <div>
+            <a target="_blank" rel="noreferrer" href="https://google.com">
+              <div className="btn-action">
+                <FaBriefcase className="icon" />
+                <span>Portfolio</span>
+              </div>
+            </a>
+
             <a
               target="_blank"
               rel="noreferrer"
@@ -140,38 +169,58 @@ function App() {
               </div>
             </a>
 
-            <a target="_blank" rel="noreferrer" href="https://google.com">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://play.google.com/store/apps/dev?id=6964311956052920659"
+            >
               <div className="btn-action">
-                <FaReact className="icon" />
-                <span>Shopee</span>
+                <BsGooglePlay className="icon" />
+                <span>Play Store</span>
               </div>
             </a>
 
-            <a target="_blank" rel="noreferrer" href="https://google.com">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://play.google.com/store/apps/details?id=com.ahmadabuhasan.qrbarcode"
+            >
               <div className="btn-action">
-                <FaReact className="icon" />
-                <span>Tokopedia</span>
+                <BsQrCodeScan className="icon" />
+                <span>App - QR Barcode</span>
               </div>
             </a>
 
-            <a target="_blank" rel="noreferrer" href="https://google.com">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.youtube.com/@ahmadabuhasan118"
+            >
               <div className="btn-action">
-                <FaReact className="icon" />
-                <span>Lazada</span>
+                <BsYoutube className="icon" />
+                <span>YouTube</span>
               </div>
             </a>
 
-            <a target="_blank" rel="noreferrer" href="https://google.com">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://open.spotify.com/user/gr3y7pr12w9ol2dy2ccdb10e7"
+            >
               <div className="btn-action">
-                <FaReact className="icon" />
-                <span>Blibli</span>
+                <BsSpotify className="icon" />
+                <span>Spotify</span>
               </div>
             </a>
 
-            <a target="_blank" rel="noreferrer" href="https://google.com">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/eby8zevin/connect-with-eby"
+            >
               <div className="btn-action">
                 <FaReact className="icon" />
-                <span>Bukalapak</span>
+                <span>Source code this bio.link</span>
               </div>
             </a>
           </div>
