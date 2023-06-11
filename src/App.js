@@ -1,14 +1,15 @@
 import "./App.css";
 import ParticlesBg from "particles-bg";
 import { useState, useRef } from "react";
+import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
 import {
   BsGithub,
   BsGooglePlay,
   BsQrCodeScan,
   BsYoutube,
   BsSpotify,
+  BsStackOverflow,
 } from "react-icons/bs";
-import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
 import {
   FaReact,
   FaLinkedinIn,
@@ -21,7 +22,17 @@ import {
   FaDev,
   FaCodepen,
 } from "react-icons/fa";
-import { SiReplit, SiHackerrank, SiLeetcode, SiGmail } from "react-icons/si";
+import { FcGoogle } from "react-icons/fc";
+import { ImProfile } from "react-icons/im";
+import {
+  SiWakatime,
+  SiReplit,
+  SiHackerrank,
+  SiLeetcode,
+  SiHackerone,
+  SiBugcrowd,
+  SiGmail,
+} from "react-icons/si";
 import Typist from "react-typist";
 import TextLoop from "react-text-loop";
 import { ToastContainer, toast, Flip } from "react-toastify";
@@ -194,6 +205,17 @@ function App() {
           </div>
 
           <div>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://bit.ly/CVAhmadAbuHasan"
+            >
+              <div className="btn-action">
+                <ImProfile className="icon" />
+                <span>Curriculum Vitae</span>
+              </div>
+            </a>
+
             <a rel="noreferrer" href="#" onClick={comingSoon}>
               <ToastContainer />
               <div className="btn-action">
@@ -249,6 +271,28 @@ function App() {
             <a
               target="_blank"
               rel="noreferrer"
+              href="https://g.dev/ahmadabuhasan"
+            >
+              <div className="btn-action">
+                <FcGoogle className="icon" />
+                <span>Google Developer</span>
+              </div>
+            </a>
+
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://wakatime.com/@bbcd646f-1daf-4865-a20e-46d4c803e6f8"
+            >
+              <div className="btn-action">
+                <SiWakatime className="icon" />
+                <span>WakaTime</span>
+              </div>
+            </a>
+
+            <a
+              target="_blank"
+              rel="noreferrer"
               href="https://www.youtube.com/@ahmadabuhasan118"
             >
               <div className="btn-action">
@@ -272,6 +316,17 @@ function App() {
               <div className="btn-action">
                 <FaDev className="icon" />
                 <span>Dev</span>
+              </div>
+            </a>
+
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://stackoverflow.com/users/15691794"
+            >
+              <div className="btn-action">
+                <BsStackOverflow className="icon" />
+                <span>Stack Overflow</span>
               </div>
             </a>
 
@@ -316,6 +371,28 @@ function App() {
               <div className="btn-action">
                 <SiLeetcode className="icon" />
                 <span>LeetCode</span>
+              </div>
+            </a>
+
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://hackerone.com/j4ncuk3rs"
+            >
+              <div className="btn-action">
+                <SiHackerone className="icon" />
+                <span>HackerOne</span>
+              </div>
+            </a>
+
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://bugcrowd.com/j4ncuk3rs"
+            >
+              <div className="btn-action">
+                <SiBugcrowd className="icon" />
+                <span>Bugcrowd</span>
               </div>
             </a>
 
