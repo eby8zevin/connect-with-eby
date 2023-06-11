@@ -8,7 +8,7 @@ import {
   BsYoutube,
   BsSpotify,
 } from "react-icons/bs";
-import { AiOutlineDown } from "react-icons/ai";
+import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
 import {
   FaReact,
   FaLinkedinIn,
@@ -17,9 +17,15 @@ import {
   FaFacebookF,
   FaTiktok,
   FaBriefcase,
+  FaCode,
+  FaDev,
+  FaCodepen,
 } from "react-icons/fa";
+import { SiReplit, SiHackerrank, SiLeetcode, SiGmail } from "react-icons/si";
 import Typist from "react-typist";
 import TextLoop from "react-text-loop";
+import { ToastContainer, toast, Flip } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const config_cursor = {
@@ -36,10 +42,43 @@ function App() {
     setDarkMode(!darkMode);
   }
 
-  function HandleScrollDown() {
+  const [isAtBottom, setIsAtBottom] = useState(false);
+
+  function handleScroll() {
+    const { scrollTop, scrollHeight, clientHeight } = card.current;
+
+    if (scrollTop + clientHeight === scrollHeight) {
+      setIsAtBottom(true);
+    } else {
+      setIsAtBottom(false);
+    }
+  }
+
+  function handleScrollDown() {
     card.current.scrollTo({
       top: card.current.scrollHeight,
       behavior: "smooth",
+    });
+  }
+
+  function handleScrollTop() {
+    card.current.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
+  function comingSoon() {
+    toast.info("Coming soon", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Flip,
     });
   }
 
@@ -51,7 +90,11 @@ function App() {
           onClick={() => toggle()}
         ></div>
         <div className={`bg-dark ${darkMode ? "active" : ""}`}></div>
-        <div ref={card} className="card-body custom-scrollbar">
+        <div
+          ref={card}
+          onScroll={handleScroll}
+          className="card-body custom-scrollbar"
+        >
           <div>
             <img
               className="card-avatar"
@@ -68,7 +111,7 @@ function App() {
                 hideWhenDone={true}
                 hideWhenDoneDelay={true}
               />
-              <span className="subtitle">سنتري | Programmer</span>
+              <span className="subtitle">Programmer</span>
               <br />
               <Typist.Delay
                 ms={100}
@@ -151,7 +194,8 @@ function App() {
           </div>
 
           <div>
-            <a target="_blank" rel="noreferrer" href="https://google.com">
+            <a rel="noreferrer" href="#" onClick={comingSoon}>
+              <ToastContainer />
               <div className="btn-action">
                 <FaBriefcase className="icon" />
                 <span>Portfolio</span>
@@ -194,6 +238,17 @@ function App() {
             <a
               target="_blank"
               rel="noreferrer"
+              href="https://www.dicoding.com/users/ahmadabuhasan"
+            >
+              <div className="btn-action">
+                <FaCode className="icon" />
+                <span>Dicoding</span>
+              </div>
+            </a>
+
+            <a
+              target="_blank"
+              rel="noreferrer"
               href="https://www.youtube.com/@ahmadabuhasan118"
             >
               <div className="btn-action">
@@ -213,6 +268,68 @@ function App() {
               </div>
             </a>
 
+            <a target="_blank" rel="noreferrer" href="https://dev.to/eby8zevin">
+              <div className="btn-action">
+                <FaDev className="icon" />
+                <span>Dev</span>
+              </div>
+            </a>
+
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://replit.com/@eby8zevin"
+            >
+              <div className="btn-action">
+                <SiReplit className="icon" />
+                <span>Replit</span>
+              </div>
+            </a>
+
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://codepen.io/eby8zevin"
+            >
+              <div className="btn-action">
+                <FaCodepen className="icon" />
+                <span>CodePen</span>
+              </div>
+            </a>
+
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.hackerrank.com/ahmadabuhasan"
+            >
+              <div className="btn-action">
+                <SiHackerrank className="icon" />
+                <span>HackerRank</span>
+              </div>
+            </a>
+
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://leetcode.com/eby8zevin"
+            >
+              <div className="btn-action">
+                <SiLeetcode className="icon" />
+                <span>LeetCode</span>
+              </div>
+            </a>
+
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="mailto:ahmadabuhasan@mhs.stmik-yadika.ac.id"
+            >
+              <div className="btn-action">
+                <SiGmail className="icon" />
+                <span>Mail</span>
+              </div>
+            </a>
+
             <a
               target="_blank"
               rel="noreferrer"
@@ -225,9 +342,14 @@ function App() {
             </a>
           </div>
         </div>
-        <div className="scroll-info" onClick={HandleScrollDown}>
-          <span className="scroll-text">Scroll Down</span>
-          <AiOutlineDown size={12} />
+        <div
+          className="scroll-info"
+          onClick={isAtBottom ? handleScrollTop : handleScrollDown}
+        >
+          <span className="scroll-text">
+            {isAtBottom ? "Scroll Top" : "Scroll Down"}
+          </span>
+          {isAtBottom ? <AiOutlineUp size={12} /> : <AiOutlineDown size={12} />}
         </div>
       </div>
 
