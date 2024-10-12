@@ -122,7 +122,7 @@ function App() {
                 hideWhenDone={true}
                 hideWhenDoneDelay={true}
               />
-              <span className="subtitle">Programmer</span>
+              <span className="subtitle">Mobile Developer</span>
               <br />
               <Typist.Delay
                 ms={100}
@@ -130,7 +130,7 @@ function App() {
                 hideWhenDoneDelay={true}
               />
               <span className="subtitle">
-                Backend &amp; Android Apps Development
+                Software Engineer X Security Enthusiast
               </span>
             </Typist>
           </div>
@@ -148,7 +148,7 @@ function App() {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://twitter.com/eby8zevin"
+              href="https://twitter.com/eby_dev"
             >
               <div className="btn-social">
                 <FaTwitter />
@@ -157,7 +157,7 @@ function App() {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://www.instagram.com/eby8zevin"
+              href="https://www.instagram.com/eby.dev"
             >
               <div className="btn-social">
                 <FaInstagram />
@@ -182,25 +182,14 @@ function App() {
           <div className="card-title">
             Familiar with{" "}
             <TextLoop interval={1000}>
-              <span className="text-blue">Android Studio</span>
-              <span className="text-blue">Android SDK</span>
-              <span className="text-blue">Android NDK</span>
               <span className="text-blue">Java</span>
               <span className="text-blue">Kotlin</span>
-              <span className="text-blue">Flutter</span>
+              <span className="text-blue">XML</span>
+              <span className="text-blue">Jetpack Compose</span>
               <span className="text-blue">Dart</span>
-              <span className="text-blue">HTML5</span>
-              <span className="text-blue">CSS3</span>
-              <span className="text-blue">JavaScript</span>
-              <span className="text-blue">PHP</span>
-              <span className="text-blue">MySQL</span>
-              <span className="text-blue">Node.js</span>
-              <span className="text-blue">React.js</span>
-              <span className="text-blue">Web Server</span>
-              <span className="text-blue">RESTful API</span>
-              <span className="text-blue">CI / CD</span>
+              <span className="text-blue">Flutter</span>
               <span className="text-blue">Git</span>
-              <span className="text-blue">Cyber-Security</span>
+              <span className="text-blue">GitHub</span>
             </TextLoop>
           </div>
 
