@@ -205,6 +205,7 @@ function App() {
               </div>
             </a>
 
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a rel="noreferrer" href="#" onClick={comingSoon}>
               <ToastContainer />
               <div className="btn-action">
