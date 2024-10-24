@@ -35,7 +35,7 @@ import {
 } from "react-icons/si";
 import Typist from "react-typist";
 import TextLoop from "react-text-loop";
-import { ToastContainer, toast, Flip } from "react-toastify";
+//import { ToastContainer, toast, Flip } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
@@ -79,19 +79,19 @@ function App() {
     });
   }
 
-  function comingSoon() {
-    toast.info("Coming soon", {
-      position: "top-center",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      transition: Flip,
-    });
-  }
+  // function comingSoon() {
+  //   toast.info("Coming soon", {
+  //     position: "top-center",
+  //     autoClose: 2000,
+  //     hideProgressBar: false,
+  //     closeOnClick: true,
+  //     pauseOnHover: true,
+  //     draggable: true,
+  //     progress: undefined,
+  //     theme: "light",
+  //     transition: Flip,
+  //   });
+  // }
 
   return (
     <div className="d-flex content-center">
@@ -205,9 +205,12 @@ function App() {
               </div>
             </a>
 
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a rel="noreferrer" href="#" onClick={comingSoon}>
-              <ToastContainer />
+            <a
+              target="_blank" 
+              rel="noreferrer" 
+              href="https://eby8zevin.github.io" 
+            >
+              {/* <ToastContainer /> */}
               <div className="btn-action">
                 <FaBriefcase className="icon" />
                 <span>Portfolio</span>
