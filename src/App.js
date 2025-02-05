@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
 import {
   BsGithub,
+  BsGitlab,
   BsGooglePlay,
   BsQrCodeScan,
   BsYoutube,
@@ -225,6 +226,17 @@ function App() {
               <div className="btn-action">
                 <BsGithub className="icon" />
                 <span>GitHub</span>
+              </div>
+            </a>
+
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://gitlab.com/ahmadabuhasan"
+            >
+              <div className="btn-action">
+                <BsGitlab className="icon" />
+                <span>GitLab</span>
               </div>
             </a>
 
