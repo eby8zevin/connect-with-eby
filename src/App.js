@@ -117,7 +117,7 @@ function App() {
 
           <div className="card-title">
             <Typist startDelay={100} cursor={config_cursor}>
-              Ahmad Abu Hasan <br />
+              𝓔𝓫𝔂 <br />
               <Typist.Delay
                 ms={500}
                 hideWhenDone={true}
@@ -149,7 +149,7 @@ function App() {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://twitter.com/eby_dev"
+              href="https://twitter.com/46eby"
             >
               <div className="btn-social">
                 <FaTwitter />
@@ -158,7 +158,7 @@ function App() {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://www.instagram.com/eby.dev"
+              href="https://www.instagram.com/jkt48.christy"
             >
               <div className="btn-social">
                 <FaInstagram />
@@ -189,8 +189,6 @@ function App() {
               <span className="text-blue">Jetpack Compose</span>
               <span className="text-blue">Dart</span>
               <span className="text-blue">Flutter</span>
-              <span className="text-blue">Git</span>
-              <span className="text-blue">GitHub</span>
             </TextLoop>
           </div>
 
